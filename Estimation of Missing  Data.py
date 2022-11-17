@@ -77,7 +77,7 @@ Data =pd.read_excel('Datap.xlsx')
 
 # The inverse distance method needs the distance b/n stations in m 
 # if we know the the distance b/n stations in degree we can convert in to meter 1 degree=110m
-# for this example randem number is used (not actual distance b/n station) but we have to use the actual distance for other work
+# for this example randem number is used (not actual distance b/n station) but it is important to use the actual distance for other work
 
 DAM=10   # MAM The distance b/n arbaminch and mirab(it is randon number not actual)
 DAC=12   # DAC The distance b/n arbaminch and chano(it is randon number not actual)
