@@ -31,5 +31,5 @@ setup(
     package_dir={"": "src"},  # Optional
     packages=find_packages(where="src"),  # Required
     python_requires=">=3.6",
-    install_requires=["pandas","matplotlib","xarray"],  # Optional
+    install_requires=["pandas","matplotlib","xarray",'progressbar2'],  # Optional
 )
