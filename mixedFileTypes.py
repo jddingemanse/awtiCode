@@ -11,7 +11,7 @@ import math
 
 def ncDataSelect(dataset,coord,method='closest',timeperiod=None,data_var=None):
     """
-    This function selects data from a NetCDF file based on the provided coordinates.
+    This function selects data from a NetCDF file based on the provided coordinates. It can be used,for example, to select data of a NetCDF file at the same location as a measurement station.
 
     Parameters
     ----------
@@ -20,7 +20,7 @@ def ncDataSelect(dataset,coord,method='closest',timeperiod=None,data_var=None):
     coord : 2-sized collection of lat,lon coordinate.
         Provide the coordinate as (lat,lon) for which you want to select data from the provided DataSet.
     method : str, optional
-        One of {'m1','closest','m2','average','m3','idw'. The default is 'closest'.
+        One of {'m1','closest','m2','average','m3','idw'}. The default is 'closest'.
         Based on the provided coordinate, 4 surrounding coordinates from the DataSet are selected.
         m1/closest: select the closest coordinate.
         m2/average: take the average of the 4 surrounding coordinates.
