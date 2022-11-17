@@ -8,7 +8,8 @@ First, make sure git is installed.
 ```
 conda install git
 ```
-If git is installed, you can install pycamtET with:
+If git is installed, you can install awtiCode with:
 ```
 pip install git+https://github.com/jddingemanse/awtiCode.git
 ```
+If that was successful, you should be able to import awtiCode into your Python working environment.
