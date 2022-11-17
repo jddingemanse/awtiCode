@@ -1,9 +1,9 @@
 # awtiCode
-Code developed by and for Arba Minch Water Technology Institute staff.
+Code developed by and for Arba Minch Water Technology Institute staff. The raw code can be found under the folder /code, some corresponding data can be found under the folder /data.
 
-Some of the code is organized as a package, that you can install in your preferred Python coding environment.
+Some of the code is organized as functions under a package, that you can install in your preferred Python coding environment.
 
-## Installation
+## Installation of awtiCode as package
 First, make sure git is installed.
 ```
 conda install git
