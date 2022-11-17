@@ -1,22 +1,5 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Nov 16 15:43:48 2022
-
-@author: jandirk
-"""
-
-import xarray as xr
-import pandas as pd
-ds=xr.open_dataset('data/m5_temperatures.nc')
-
-latmin,latmax,lonmin,lonmax=3,16,32,48
-dsET = ds.air[:,(ds.lat>latmin)&(ds.lat<latmax),(ds.lon>lonmin)&(ds.lon<lonmax)]
-
-yearAvg = dsET.groupby(group=dsET.time.dt.year).mean()
-
-
+import numpy as np
 from matplotlib import pyplot as plt, animation
-%matplotlib
 
 def animateLatLonNC(dataset,lonDim='lon',latDim='lat',timeDim='time',saveAni = False):
 
@@ -32,5 +15,4 @@ def animateLatLonNC(dataset,lonDim='lon',latDim='lat',timeDim='time',saveAni = F
     return fig
     
     if saveAni==True:    
-        anim.save('animation.mp4')
-    
+        anim.save('animation.mp4') 
