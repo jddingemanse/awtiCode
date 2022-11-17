@@ -26,6 +26,7 @@ for filename in filenames[1:3]:
 ftp.quit() #This is the 'polite' way to close a connenction
 #Data analysis: This is depends up on the personal intersest and,
 # mainy can be imported by the help of xarray.
+#For instance,
 import xarray as xr
 ds = xr.open_dataset('output/chirps-v2.0.1981.days_p25.nc')
 
