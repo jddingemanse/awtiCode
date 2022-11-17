@@ -15,7 +15,7 @@ Created on Thu Nov  17 04:33:14 2022
 import pandas as pd
 import numpy as np
 
-#Importing the data you want to feill
+#Importing the data you want to feill  IMPORTANT NOTE YOU CAN GET THIS DATA FROM SHARED FILE Datap.xlsx
 
 Data =pd.read_excel('Datap.xlsx')
 
