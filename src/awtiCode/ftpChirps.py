@@ -9,6 +9,24 @@ Created on Tue Nov 15 08:21:44 2022
 from ftplib import FTP
 import os, sys, os.path
 
+def getFileList(directory):
+    #Connecting to the ftp server
+    ftp = FTP('ftp.chc.ucsb.edu')
+    ftp.login()
+    #Changing to the given directory
+    print ('Changing to ' + directory)
+    try:
+        ftp.cwd(directory)
+    except:
+        print('The given directory does not exist. Please provide a valid Chirps ftp directory, under which there is the file with the given filename.')
+        ftp.close()
+        return
+    filelist = ftp.nlst()
+    ftp.close()
+    print('List of '+str(len(filelist))+' files found under directory '+directory+'.')
+    print('You can use the directory in combination with any of the filenames in the function downloadChirps, to download that specific file.')
+    return filelist
+
 def downloadChirps(directory,filename,local_folder=None):
     
     #Connecting to the ftp server
