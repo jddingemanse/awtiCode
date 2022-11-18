@@ -9,6 +9,39 @@ Created on Tue Nov 15 08:21:44 2022
 from ftplib import FTP
 import os, sys, os.path
 
+def ftpChirpsExplore(directory = '/pub/org/chg/products/'):
+    ftp = FTP("ftp.chc.ucsb.edu")
+    ftp.login()
+    ftp.cwd(directory)
+    answer = 'start'
+    chosen_directory = directory
+    while True:
+        file_list = ftp.nlst()
+        print('Under directory '+chosen_directory+', there are the following directories and/or files: ')
+        print(file_list)
+        answer = input('Type any directory you want to go into. To go back to the original directory, type \'back\'. To stop exploring, type \'quit\'.\n>>>')
+        if answer.lower().startswith('q'):
+            print('You are leaving the ftp server.')
+            break
+        elif answer == 'back':
+            print('Going back to directory '+directory)
+            chosen_directory = directory
+            ftp.cwd(directory)
+        elif answer == 'up':
+            bindex = chosen_directory[-2::-1].find('/')
+            chosen_directory = chosen_directory[:-1-bindex]
+            print('Going up to directory '+chosen_directory)
+            ftp.cwd(chosen_directory)
+        elif answer in file_list:
+            try:
+                ftp.cwd(chosen_directory+answer+'/')
+                chosen_directory += answer+'/'               
+            except:
+                print('It was not possible to go into '+chosen_directory+answer+'/. Please select another.')
+        else:
+            print('Input was not clear.')
+    ftp.quit()
+
 def getFileList(directory):
     #Connecting to the ftp server
     ftp = FTP('ftp.chc.ucsb.edu')
