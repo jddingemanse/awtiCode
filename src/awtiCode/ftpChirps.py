@@ -9,13 +9,6 @@ Created on Tue Nov 15 08:21:44 2022
 from ftplib import FTP
 import os, sys, os.path
 
-#progressbar import statements
-import progressbar
-from progressbar import Bar, ETA, FileTransferSpeed, Percentage, ProgressBar
-widgets = ['Downloading: ', Percentage(), ' ',
-                    Bar(marker='#',left='[',right=']'),
-                    ' ', ETA(), ' ', FileTransferSpeed()]
-
 def downloadChirps(directory,filename,local_folder=None):
     
     #Connecting to the ftp server
@@ -36,19 +29,18 @@ def downloadChirps(directory,filename,local_folder=None):
         local_filename = filename
     else:
         local_filename = os.path.join(local_folder, filename)
-    size = ftp.size(filename)
+    
     file = open(local_filename, 'wb')
     
-    print('Starting to download file. This might take a while...')
-    pbar = progressbar.ProgressBar(widgets=widgets, maxval=size)
-    pbar.start()
-
-    def file_write(data):
-       file.write(data) 
-       global pbar
-       pbar += len(data)
-    
-    ftp.retrbinary("RETR " + filename, file_write)    
-    file.close()
+    try:
+        print('Starting to download file. This might take a while...')
+        
+        ftp.retrbinary("RETR " + filename, file.write)    
+        file.close()
+    except:
+        print('Something went wrong. Download is not succeeded.')
+        file.close()
+        ftp.quit()
+        return
     print('Download finished. File saved as '+local_filename+'.')
     ftp.quit()
