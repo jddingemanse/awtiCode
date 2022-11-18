@@ -14,7 +14,7 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 
 setup(
     name="awtiCode",  # Required
-    version="0.0.1",  # Required
+    version="0.0.2",  # Required
     description="Code developed by and for Arba Minch University Water Technology staff",  # Optional
     long_description=long_description,  # Optional
     long_description_content_type="text/markdown",  # Optional (see note above)
@@ -31,5 +31,5 @@ setup(
     package_dir={"": "src"},  # Optional
     packages=find_packages(where="src"),  # Required
     python_requires=">=3.6",
-    install_requires=["pandas","matplotlib","xarray",'progressbar2'],  # Optional
+    install_requires=["pandas","matplotlib","xarray"],  # Optional
 )
