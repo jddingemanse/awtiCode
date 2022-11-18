@@ -41,7 +41,7 @@ Data =pd.read_excel('Datap.xlsx')
 #Normal ratio method requares the normal anual rain fall of each neghaboring stations and 
 #the mean annual rain fall of all stations(NX)
 
-NA=Data['Arbaminch'].mean()  #the normal annual rain fall of arbaninch
+NA=Data['Arbaminch'].mean()  #the normal annual rain fall of arbaminch
 NM=Data['Mirab'].mean()      #the normal annual rain fall of Mirab
 NC=Data['Chano'].mean()      #the normal annual rain fall of Chano
 NS=Data['Shara'].mean()      #the normal annual rain fall of Shara
@@ -75,14 +75,14 @@ import numpy as np
 
 Data =pd.read_excel('Datap.xlsx')
 
-# The inverse distance method needs the distance b/n stations in m 
-# if we know the the distance b/n stations in degree we can convert in to meter 1 degree=110m
+# The inverse distance method needs the distance b/n stations in km 
+# if we know the the distance b/n stations in degree we can convert in to meter 1 degree=110km
 # for this example randem number is used (not actual distance b/n station) but it is important to use the actual distance for other work
 
 DAM=10   # MAM The distance b/n arbaminch and mirab(it is randon number not actual)
 DAC=12   # DAC The distance b/n arbaminch and chano(it is randon number not actual)
 DAS=14   # DAS The distance b/n arbaminch and shara(it is randon number not actual)
-DMS=16   # DNS The distance b/n mirab and shara(it is randon number not actual)
+DMS=16   # DMS The distance b/n mirab and shara(it is randon number not actual)
 DCM=18   # DCM The distance b/n chano and mirab(it is randon number not actual)
 DCS=20   # DCS The distance b/n chano and shara(it is randon number not actual)
 
