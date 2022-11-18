@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# small change for test of pulling
+# small change for test of pushing
 def tempFtoK(tempF):
     """Input Fahrenheit, get Kelvin"""
     tempK = (tempF + 459.67)*5/9
