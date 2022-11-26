@@ -19,7 +19,7 @@ def ftpChirpsExplore(directory = '/pub/org/chg/products/'):
         file_list = ftp.nlst()
         print('Under directory '+chosen_directory+', there are the following directories and/or files: ')
         print(file_list)
-        answer = input('Type any directory you want to go into. To go back to the original directory, type \'back\'. To stop exploring, type \'quit\'.\n>>>')
+        answer = input('Type any directory you want to go into. To go back to the original directory, type \'back\'. To stop exploring, type \'quit\'. To go one directory up, type \'up\'.\n>>>')
         if answer.lower().startswith('q'):
             print('You are leaving the ftp server.')
             break
