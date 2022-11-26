@@ -1,5 +1,5 @@
 # awtiCode
-Code developed by and for Arba Minch Water Technology Institute (AWTI) staff. The raw code can be found on the repository jddingemanse/awtiCodeDev under the folder /code, some corresponding data can be found under the folder /data.
+Code developed by and for Arba Minch Water Technology Institute (AWTI) staff. The raw code can be found on the repository [jddingemanse/awtiCodeDev](http://www.github.com/jddingemanse/awtiCodeDev) under the folder /code/, some corresponding data can be found under the folder /data/.
 
 ## About awtiCode
 Development of code under repositories awtiCodeDev and awtiCode is an initiative to let some AWTI staff gain experience in coding by (trying to) write relevant code for their colleagues.
