@@ -12,7 +12,8 @@ def animateLatLonNC(dataset,lonDim='lon',latDim='lat',timeDim='time',saveAni = F
        ax.set_title(dataset[timeDim].dt.strftime('%B %Y')[i].values)
 
     anim = animation.FuncAnimation(fig, animate, interval=100, frames=len(dataset.time))
-    return fig
+    fig.show()
+    return anim
     
     if saveAni==True:    
         anim.save('animation.mp4') 
