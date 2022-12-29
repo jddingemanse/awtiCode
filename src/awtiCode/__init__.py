@@ -4,4 +4,3 @@ from . import fillMissing
 from . import ftpChirps
 from . import mixedFileTypes
 from . import tempAnimation
-from . import optimization
