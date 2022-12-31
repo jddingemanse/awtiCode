@@ -89,7 +89,7 @@ def IDM(fillColumns,distances):
         return
     
     distances = np.array(distances)
-    invDist = 1/distances
+    invDist = 1/distances**2
     sumID = np.sum(invDist)
     
     #To make shure that the correct distance is matched with the correct column,
